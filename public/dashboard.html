@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css" />
+
+<title>Dashboard</title>
+</head>
+<body data-page="dashboard">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom">
+  <div class="container">
+    <a class="navbar-brand" href="/index.html">Movie Log</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="siteNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="mainNavLinks">
+        <li class="nav-item"><a class="nav-link" href="/dashboard.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/watchlist.html">Watchlist</a></li>
+        <li class="nav-item"><a class="nav-link" href="/discover.html">Discover</a></li>
+        <li class="nav-item"><a class="nav-link" href="/profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="/faq.html">FAQ</a></li>
+      </ul>
+      <div class="d-flex gap-2">
+        <a class="btn btn-outline-light btn-sm" href="/login.html">Login</a>
+        <button id="logoutBtn" class="btn btn-success btn-sm d-none">Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<main class="container py-4">
+<div class="page-header-block"><h1 class="display-6 fw-bold">Dashboard</h1><p id="welcomeText" class="text-secondary mb-0">Welcome</p></div>
+<div class="row g-3 mb-4" id="statsGrid"></div>
+<div class="row g-4">
+  <div class="col-lg-7">
+    <div class="card card-soft p-4 mb-4">
+      <h2 class="h4 mb-3">Search movies with OMDb</h2>
+      <form id="movieSearchForm" class="row g-2">
+        <div class="col"><input class="form-control" type="text" id="movieSearchInput" placeholder="Search by movie title..." required /></div>
+        <div class="col-auto"><button class="btn btn-success" type="submit">Search</button></div>
+      </form>
+      <div id="movieSearchResults" class="vstack gap-3 mt-3"><div class="alert alert-light border mb-0">Search for a movie to quickly add it to your watched list.</div></div>
+    </div>
+    <div class="card card-soft p-4">
+      <h2 class="h4 mb-3">Log a movie</h2>
+      <form id="movieForm" class="vstack gap-3">
+        <input type="hidden" id="posterUrl" /><input type="hidden" id="omdbId" />
+        <div><label class="form-label" for="title">Movie title</label><input class="form-control" type="text" id="title" required /></div>
+        <div class="row g-3">
+          <div class="col-md-6"><label class="form-label" for="dateWatched">Date watched</label><input class="form-control" type="date" id="dateWatched" required /></div>
+          <div class="col-md-6"><label class="form-label" for="rating">Rating</label><select class="form-select" id="rating" required><option value="">Select rating</option><option value="1">1/5</option><option value="2">2/5</option><option value="3">3/5</option><option value="4">4/5</option><option value="5">5/5</option></select></div>
+        </div>
+        <div><label class="form-label" for="review">Review</label><textarea class="form-control" id="review" rows="5" placeholder="Write your thoughts about the movie..."></textarea></div>
+        <button class="btn btn-success" type="submit">Save Movie</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-lg-5"><div class="card card-soft p-4"><h2 class="h4 mb-3">Most recent movies logged</h2><div id="movieList" class="vstack gap-3"></div></div></div>
+</div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

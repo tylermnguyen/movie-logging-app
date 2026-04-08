@@ -1,0 +1,13 @@
+:root{--brand-dark:#0f1720;--brand-card:#18232f;--brand-card-2:#223140;--brand-accent:#34d399}
+body{background-color:#f5f7fb}
+.hero-gradient{background:linear-gradient(135deg,#0f1720 0%,#1f3a5a 100%)}
+.poster-thumb{width:84px;aspect-ratio:2/3;object-fit:cover;border-radius:.75rem;background:#dee2e6}
+.poster-lg{width:100%;max-width:280px;aspect-ratio:2/3;object-fit:cover;border-radius:1rem;background:#dee2e6}
+.card-soft{border:0;border-radius:1rem;box-shadow:0 .5rem 1.25rem rgba(0,0,0,.08)}
+.navbar-brand{letter-spacing:.08em;font-weight:800;text-transform:uppercase}
+.metric-card{border:0;border-radius:1rem;box-shadow:0 .5rem 1.25rem rgba(0,0,0,.06)}
+.metric-value{font-size:2rem;font-weight:800}
+.result-card,.media-card{border:0;border-radius:1rem;box-shadow:0 .5rem 1.25rem rgba(0,0,0,.06)}
+.min-section{min-height:220px}
+.page-header-block{margin-bottom:1.5rem}
+.small-muted{font-size:.92rem;color:#6c757d}
