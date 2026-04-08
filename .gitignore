@@ -1,0 +1,7 @@
+# Dependencies created by npm install
+node_modules/
+package-lock.json
+
+# Runtime files that may be created by npm start
+movies.db
+sessions.db
